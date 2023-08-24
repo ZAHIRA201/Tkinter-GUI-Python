@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Tarik BOUDAA">
+        <!-- Custom fonts for this template-->
+        <link href="./ENSAH _ E-SERVICES_files/all.min.css" rel="stylesheet" type="text/css">
+        <link href="./ENSAH _ E-SERVICES_files/css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="https://ensah.ma/apps/eservices/favicon.png">
+
+        <title>ENSAH | E-SERVICES</title>
+
+        <script src="./ENSAH _ E-SERVICES_files/jquery.min.js.téléchargement"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="./ENSAH _ E-SERVICES_files/jquery.easing.min.js.téléchargement"></script>
+
+        <!-- Custom styles for this template -->
+
+        <link rel="stylesheet" href="./ENSAH _ E-SERVICES_files/appstyle.css" type="text/css">
+
+
+
+        <script type="text/javascript">
+
+            function reloadPage()
+            {
+                // Recharge la page actuelle, sans utiliser le cache
+                setTimeout('window.location.href=window.location.href', 100);
+
+
+            }
+            function confirmationDoc() {
+
+                var msg = "Êtes-vous sur de vouloir supprimer ce document?";
+
+                return confirm(msg);
+            }
+
+
+        </script>
+    </head>
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+            <!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://ensah.ma/apps/eservices/internal/members/common/contacts.php">
+        <div class="sidebar-brand-icon rotate-n-15">
+           <!-- <i class="fas fa-laugh-wink"></i>-->
+        </div>
+        <div style="margin-top:8px; margin-bottom: 5px;"><img class="rounded-circle" width="50" height="50" src="./ENSAH _ E-SERVICES_files/eserviceslogo2.png"><sup>6.2.beta</sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="https://ensah.ma/apps/eservices/internal/members/etudiant/studentHome.php">
+            <i class="fas fa-fw fa-home"></i>
+            <span>Accueil</span></a>
+    </li>
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Etudes &amp; stage
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-book-reader"></i>
+            <span>Cours</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Cours :</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/mesCours.php">Cours de ma classe  </a>
+
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/rechercheParFiliere.php">Cours année actuelle</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/rechercheCours.php">Recherche avancée</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/rechercheDoc.php">Anciens documents</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Gérer les notifications:</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#">Activer/Desactiver</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePagesx" aria-expanded="true" aria-controls="collapsePagesx">
+            <i class="fas fa-user-graduate"></i>
+            <span>Rapports &amp; stage</span>
+        </a>
+        <div id="collapsePagesx" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Rapport PFE :</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/common/listPfes.php">Consulter</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/getPfeInfosForm.php">Déposer un rapport PFE</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/mesRapports.php">Mes rapports PFE</a>
+
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Autres Rapports:</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/listRapports.php">Rapport PFA</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/getPFAInfosForm.php">Déposer un rapport PFA</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/mesPFA.php">Mes rapports PFA</a>
+
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Documents Stage:</h6>
+              <!--  <a class="collapse-item" href="#">Publier une offre de stage</a> -->
+                <a class="collapse-item" target="_blank" href="https://ensah.ma/apps/eservices/internal/members/common/getNewsResource.php?docname=0603201913084499999898225.pdf">Demande</a>
+                <a class="collapse-item" target="_blank" href="https://ensah.ma/apps/eservices/internal/members/common/getNewsResource.php?docname=0603201913074499999875124.pdf">Convention</a>
+
+            </div>
+        </div>
+
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePagesxx" aria-expanded="true" aria-controls="collapsePagesxx">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Bibliothèque</span>
+        </a>
+        <div id="collapsePagesxx" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Catalogue :</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/publiclistLivres.php">Consulter</a>
+                <div class="collapse-divider"></div>
+
+            </div>
+        </div>
+
+    </li>
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Services en ligne
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu (Edited by CHERRADI MOHAMED) -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapseTw" aria-expanded="true" aria-controls="collapseTw">
+            <i class="fas fa-edit"></i>
+            <span>Activités Parascolaires</span>
+        </a>
+        <div id="collapseTw" class="collapse" aria-labelledby="headingTw" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <!--  <h6 class="collapse-header">Custom Components:</h6> -->
+                <a class="collapse-item" href="https://www.ensah.ma/public/tableauAffichageBDE.php" target="_blank">Conculter</a>
+				<!-- check if user is a member of bde -->
+				   
+			</div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-school"></i>
+            <span>Réinscription</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <!--  <h6 class="collapse-header">Custom Components:</h6> -->
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/reinscriptionForm.php">Réinscription à l'ENSAH</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/reinscriptionInternatForm.php">Réinscription à l'internat</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-address-card"></i>
+            <span>Demandes</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/demanderAttForm.php">Nouvelle demande</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/mesDemandesAtt.php">Etat de mes demandes</a>
+
+            </div>
+        </div>
+    </li>
+	
+<!-- Ceci c'est un commentaire 11/09/2022 19:25:00 -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities2">
+            <i class="fas fa-fw fa-external-link-alt"></i>
+            <span>Orientation</span>
+        </a>
+        <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+				<!--
+                <a class="collapse-item" href="">1ère Année Cycle Ingénieur</a>
+                -->
+				<a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/choixOptionGCForm.php">Option 3ème Année GC</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/choixOptionGIForm.php">Option 3ème Année GI</a>
+				
+            </div>
+        </div>
+    </li>
+<!-- End comment 31/08/2022 11:45:00 -->
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePagesetc5" aria-expanded="true" aria-controls="collapsePagesetc5">
+            <i class="fas fa-clipboard"></i>
+            <span>Affichage des notes</span>
+        </a>
+        <div id="collapsePagesetc5" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/common/affichageNotes.php">Tableau des notes</a>
+
+            </div>
+        </div>
+
+
+
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePagesx2" aria-expanded="true" aria-controls="collapsePagesx2">
+            <i class="fas fa-fw fa-laptop-code"></i>
+            <span>Service Informatique</span>
+        </a>
+        <div id="collapsePagesx2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/common/reclamerProbleme.php">Réclamer un problème</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/common/mesProblemes.php">Etat de mes réclamations</a>
+                <div class="collapse-divider"></div>                 
+
+            </div>
+        </div>
+
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Autres
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePagesx1" aria-expanded="true" aria-controls="collapsePagesx1">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Profile</span>
+        </a>
+
+
+        <div id="collapsePagesx1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Mes informations :</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/mesInfos.php">Consulter ma fiche</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/changeMyPhoto.php">Changer photo</a>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/changerEmail.php">Modifier coordonnées</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Compte eServices:</h6>
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/changePasswordForm.php">Changer mot de passe</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" data-toggle="collapse" data-target="#collapsePagesx22" aria-expanded="true" aria-controls="collapsePagesx22">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Personnel</span>
+        </a>
+        <div id="collapsePagesx22" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/recherchePersonnel.php">Consulter</a>
+                <div class="collapse-divider"></div>
+
+
+            </div>
+        </div>
+
+    </li>
+
+
+
+
+
+
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+     <!-- Sidebar Message -->
+    <div class="sidebar-card">
+         <p class="text-center mb-2"><strong>e-Services</strong> est une application Web développée par Tarik BOUDAA pour  offrir un ensemble de services numériques aux membres de l'établissement .<br>
+<a class="btn btn-success btn-sm" href="https://ensah.ma/apps/eservices/internal/members/common/contacts.php">En Savoir plus sur eServices </a> </p>     
+    </div>
+
+</ul>
+<!-- End of Sidebar -->            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+
+                        
+                        <!-- Topbar Search -->
+                        <form method="POST" action="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small" placeholder="Rcherche par mot clé" aria-label="Rechercher" aria-describedby="basic-addon2" name="keyword"> 
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                            <li class="nav-item dropdown no-arrow d-sm-none">
+                                <a class="nav-link dropdown-toggle" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form method="POST" action="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447" class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small" placeholder="Rcherche par mot clé" aria-label="Rechercher" aria-describedby="basic-addon2" name="keyword">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                                                            <li class="nav-item dropdown no-arrow mx-1">
+                                    <a class="nav-link dropdown-toggle" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-bell fa-fw"></i>
+                                        <!-- Counter - Alerts -->
+                                        <span class="badge badge-danger badge-counter">*</span>                                    </a>
+                                    <!-- Dropdown - Alerts -->
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                        <h6 class="dropdown-header">
+                                            Notications
+                                        </h6>
+
+
+
+                                                                                <a class="dropdown-item text-center small text-gray-500" href="https://ensah.ma/apps/eservices/internal/members/common/notifications.php"><span style="color:green"><i class="fas fa-angle-double-right"></i> Lire les notifications</span></a>
+                                </div>
+                            </li>
+                                                        <!-- Nav Item - Messages -->
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <a class="nav-link dropdown-toggle" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-envelope fa-fw"></i>
+                                    <!-- Counter - Messages -->
+
+                                    <!-- Counter - Alerts -->
+                                                                    </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                    <h6 class="dropdown-header">
+                                        Boite de messages
+                                    </h6>
+                                     <a class="dropdown-item d-flex align-items-center" href="https://ensah.ma/apps/eservices/internal/members/common/lireMessage.php?idMessage=1195">  <div class="mr-3">  <div class="icon-circle bg-primary">  <i class="fas fa-file-alt text-white"></i>  </div>  </div>  <div>  <div class="small text-gray-500">08-09-2022 9:56</div>[AZNAG M'hamed] Validation de votre réinscription en ligne  </div>  </a> <a class="dropdown-item d-flex align-items-center" href="https://ensah.ma/apps/eservices/internal/members/common/lireMessage.php?idMessage=530">  <div class="mr-3">  <div class="icon-circle bg-primary">  <i class="fas fa-file-alt text-white"></i>  </div>  </div>  <div>  <div class="small text-gray-500">13-09-2021 15:50</div>[AZNAG M'hamed] Validation de votre réinscription en ligne  </div>  </a><a class="dropdown-item text-center small text-gray-500" href="https://ensah.ma/apps/eservices/internal/members/common/listMessages.php"><span style="color:green"><i class="fas fa-angle-double-right"></i> Lire plus de messages</span></a>  
+                                </div>
+                            </li>
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!--Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">HAI </span>
+                                    <img class="img-profile rounded-circle" src="./ENSAH _ E-SERVICES_files/user-1.png">
+                                </a>
+                                <!--Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+
+
+                                    
+
+                                    <a class="dropdown-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/mesInfos.php">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Mon Compte
+                                    </a>
+									                                     <a class="dropdown-item" href="https://ensah.ma/apps/eservices/internal/members/etudiant/changePasswordForm.php">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Changer mot de passe
+                                    </a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="https://ensah.ma/apps/eservices/internal/members/common/deconnexion.php">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Se déconnecter
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+                    <!--End of Topbar -->
+                    <!--Begin Page Content -->
+                    <div class="container-fluid">
+<script type="text/javascript">
+    var date = new Date();
+    function timeDifference(endDate, startDate) {
+
+        return (endDate.getTime() - startDate.getTime()) / 1000;
+
+    }
+
+
+
+
+function processLink(event) {
+     var newDate = new Date();
+
+     var diff = timeDifference(newDate,date);
+
+    if (diff<1) {
+        //alert(diff);
+        event.preventDefault();
+        return false;
+    }
+    date = newDate;
+
+
+    return true;
+}
+
+
+</script>
+
+
+
+        <ul class="nav nav-pills">
+
+
+
+            <li class="nav-item ">
+                                    <a class="nav-link"><span class="text-danger"> Ce cours n'autorise pas les questions</span></a>
+                                </li>
+            <li class="nav-item ">        
+                <a class="nav-link" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#infosgen"> Infos. du cours  </a>    
+
+            </li>
+            <li class="nav-item ">        
+                <a class="nav-link" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#docslist"> Documents  </a>    
+
+            </li>
+            <li class="nav-item ">        
+                <a class="nav-link" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#links"> Liens   </a>    
+
+            </li>
+            <li class="nav-item ">        
+                <a class="nav-link" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#annonces"> Annonces  </a>    
+
+            </li>
+            <li class="nav-item ">        
+                <a class="nav-link" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#qa"> Questions/Réponses  </a>    
+
+            </li>
+
+        </ul>
+
+
+
+
+        
+
+<div><div class="border" style="padding: 20px ;margin-bottom: 10px"><div class="p-3 mb-2 bg-secondary text-white"><h3 id="infosgen">Titre :  Les bases du Web</h3> </div><div style="padding: 20px"><p><strong>Identifiant unique du cours : </strong>1447 </p> <p><strong>Enseignant : </strong>BENGAG Amina(<i><span style="color:blue"></span></i>)</p> <p><strong>Filière : </strong>Version de filière Ingénierie de Données&nbsp;&nbsp;&nbsp;&nbsp;  <strong>Niveau / Semestre : </strong>ID1/S2</p> <p><strong>Module : </strong>Programmation Python / Les bases du Web&nbsp;&nbsp;&nbsp;&nbsp;<strong>Elément de module  : </strong>les bases du web</p> <p><strong>Date de Création :</strong> 2023-03-13 21:57:00</p> <p><strong>Date de la dernière mise à jour :</strong> 2023-03-27 23:28:00</p> </div><div id="docslist" class="border" style="padding: 20px;  margin-bottom: 10px"><h5 class="text-primary"> Documents attachés à ce cours </h5><div class="table-responsive" style="margin-top:30px"><table id="tableAffichage" class="table"> <thead class="table-info"><tr><th></th><th>ID</th><th>Titre</th><th>Type</th><th>Date MAJ</th><th>#</th><th>#</th></tr></thead><tbody><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3918</td> <td>JavaScript</td> <td>Travaux Pratiques</td> <td> <div class="badge badge-secondary text-wrap">27-03-2023</div></td> <td><i>Téléchargé 39 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3918">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3917</td> <td>JavaScript</td> <td>Cours</td> <td> <div class="badge badge-secondary text-wrap">27-03-2023</div></td> <td><i>Téléchargé 28 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3917">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3910</td> <td>Aide (Exercice 1 de CSS)</td> <td>Travaux Pratiques</td> <td> <div class="badge badge-secondary text-wrap">21-03-2023</div></td> <td><i>Téléchargé 27 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3910">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3906</td> <td>TP1</td> <td>Travaux Pratiques</td> <td> <div class="badge badge-secondary text-wrap">21-03-2023</div></td> <td><i>Téléchargé 58 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3906">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3903</td> <td>HTML partie2</td> <td>Cours</td> <td> <div class="badge badge-secondary text-wrap">20-03-2023</div></td> <td><i>Téléchargé 72 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3903">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3902</td> <td>CSS</td> <td>Cours</td> <td> <div class="badge badge-secondary text-wrap">20-03-2023</div></td> <td><i>Téléchargé 56 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3902">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr><tr style="background-color:#fff"><td><img alt="PDF" width="30" height="30" src="./ENSAH _ E-SERVICES_files/pdf.png"></td> <td>3891</td> <td>séance1</td> <td>Cours</td> <td> <div class="badge badge-secondary text-wrap">16-03-2023</div></td> <td><i>Téléchargé 66 fois</i></td> <td><a onclick="processLink(event)" href="https://ensah.ma/apps/eservices/internal/members/common/getResource.php?t=1&amp;idDocument=3891">   <img src="./ENSAH _ E-SERVICES_files/download.png" style="border :none"></a></td> </tr></tbody></table></div></div><div id="links" class="border" style="padding: 20px;  margin-bottom: 10px"><h5 class="text-primary"> Liens externes / Contenu multimédia</h5></div><div id="annonces" class="border" style="padding: 20px;  margin-bottom: 10px"><h5 class="text-primary">Annonces </h5><h6 id="annonce"><strong><span style="color:green">mini Projets</span></strong></h6><p></p><p>Mini Projet 1 : Gestion des étudiants de l'ENSAH&nbsp;</p>
+<p>Mini Projet 2 : Gestion des employés de l'ENSAH (Administration, RH, Enseignants,...]</p>
+<ul>
+<li>Outils et langage : <br>- Tkinter pour l'interface graphique (oblogatoire)<br>- éditeur Pycharm<br>- Base de données MySQL<br>- Php / Python : pour enregister les données dans la BDD et les récupérer</li>
+<li>Aide:<br>- deux formulaires : pour la connexion et l'inscription<br>- boutons pour: fermer le formulaire, enregistrer les données, ...<br>- Vérifier si un chapms et vide/ contient des N° au lieu de caractères...<br>- Vérifier si l'user entre un nom qui existe déjà avec le meme id<br>- ...<br>dérnier délai: 16 Avril</li>
+</ul><p></p><i> publiée le 16-03-2023 12:20</i><br><hr></div></div>
+
+
+           </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content --> 
+
+		   <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>E-SERVICES  © Copyright 2020 - Dévelopée par T. BOUDAA</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+	</div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="https://ensah.ma/apps/eservices/internal/members/etudiant/consulterCours.php?idCours=1447#page-top" style="display: inline;">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="https://ensah.ma/apps/eservices/internal/members/etudiant/login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="./ENSAH _ E-SERVICES_files/bootstrap.bundle.min.js.téléchargement"></script>
+  
+    <!-- Custom scripts for all pages-->
+    <script src="./ENSAH _ E-SERVICES_files/sb-admin-2.min.js.téléchargement"></script>
+
+  
+
+
+
+
+
+										</div></body></html>
